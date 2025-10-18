@@ -1,23 +1,23 @@
-Start testing: Oct 18 12:01 UTC
+Start testing: Oct 18 12:04 UTC
 ----------------------------------------------------------
 1/8 Testing: test_ggml_basics
 1/8 Test: test_ggml_basics
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_ggml_basics"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_ggml_basics" start time: Oct 18 12:01 UTC
+"test_ggml_basics" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
-ggml_print_objects: objects in context 0x55a7794b2340:
- - ggml_object: type = 0, offset = 32, size = 352, next = 0x55a7794b2540
- - ggml_object: type = 0, offset = 416, size = 352, next = 0x55a7794b26c0
- - ggml_object: type = 0, offset = 800, size = 352, next = 0x55a7794b2840
+ggml_print_objects: objects in context 0x56195a743340:
+ - ggml_object: type = 0, offset = 32, size = 352, next = 0x56195a743540
+ - ggml_object: type = 0, offset = 416, size = 352, next = 0x56195a7436c0
+ - ggml_object: type = 0, offset = 800, size = 352, next = 0x56195a743840
  - ggml_object: type = 1, offset = 1184, size = 66160, next = (nil)
 ggml_print_objects: --- end ---
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_ggml_basics" end time: Oct 18 12:01 UTC
+"test_ggml_basics" end time: Oct 18 12:04 UTC
 "test_ggml_basics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -25,7 +25,7 @@ Test Passed.
 2/8 Test: test_quantized_matmul_on_gpu
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_quantized_matmul_on_gpu"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_quantized_matmul_on_gpu" start time: Oct 18 12:01 UTC
+"test_quantized_matmul_on_gpu" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
 Skipping test_quantized_matmul_on_gpu.c: GGML_USE_CUDA is not defined
@@ -33,7 +33,7 @@ Skipping test_quantized_matmul_on_gpu.c: GGML_USE_CUDA is not defined
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_quantized_matmul_on_gpu" end time: Oct 18 12:01 UTC
+"test_quantized_matmul_on_gpu" end time: Oct 18 12:04 UTC
 "test_quantized_matmul_on_gpu" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -41,7 +41,7 @@ Test Passed.
 3/8 Test: test_tiny_rwkv
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_tiny_rwkv"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_tiny_rwkv" start time: Oct 18 12:01 UTC
+"test_tiny_rwkv" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
 System info: AVX=1 AVX2=1 AVX512=0 FMA=1 NEON=0 ARM_FMA=0 F16C=1 FP16_VA=0 WASM_SIMD=0 SSE3=1 VSX=0
@@ -226,10 +226,10 @@ Testing tiny-rwkv-7v0-834K-FP16-to-Q8_0.bin
 Serial difference sum: 0.010921, expected 0.010921
 Sequence difference sum: 0.010921, expected 0.010921
 <end of output>
-Test time =   0.65 sec
+Test time =   0.64 sec
 ----------------------------------------------------------
 Test Passed.
-"test_tiny_rwkv" end time: Oct 18 12:01 UTC
+"test_tiny_rwkv" end time: Oct 18 12:04 UTC
 "test_tiny_rwkv" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -237,7 +237,7 @@ Test Passed.
 4/8 Test: test_quantization_format_compatibility
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_quantization_format_compatibility"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_quantization_format_compatibility" start time: Oct 18 12:01 UTC
+"test_quantization_format_compatibility" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
 System info: AVX=1 AVX2=1 AVX512=0 FMA=1 NEON=0 ARM_FMA=0 F16C=1 FP16_VA=0 WASM_SIMD=0 SSE3=1 VSX=0
@@ -269,7 +269,7 @@ Sequence difference sum: 1.409082, expected 3.576909
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"test_quantization_format_compatibility" end time: Oct 18 12:01 UTC
+"test_quantization_format_compatibility" end time: Oct 18 12:04 UTC
 "test_quantization_format_compatibility" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -277,7 +277,7 @@ Test Passed.
 5/8 Test: test_logit_calculation_skipping
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_logit_calculation_skipping"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_logit_calculation_skipping" start time: Oct 18 12:01 UTC
+"test_logit_calculation_skipping" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
 Testing serial mode
@@ -286,7 +286,7 @@ Testing sequential mode
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"test_logit_calculation_skipping" end time: Oct 18 12:01 UTC
+"test_logit_calculation_skipping" end time: Oct 18 12:04 UTC
 "test_logit_calculation_skipping" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -294,7 +294,7 @@ Test Passed.
 6/8 Test: test_eval_sequence_in_chunks
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_eval_sequence_in_chunks"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_eval_sequence_in_chunks" start time: Oct 18 12:01 UTC
+"test_eval_sequence_in_chunks" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
 Calculating expected state and logits for prompt of size 70
@@ -308,10 +308,10 @@ Testing chunk_size = 2
 Testing chunk_size = 8
 Testing chunk_size = 10
 <end of output>
-Test time =   0.11 sec
+Test time =   0.10 sec
 ----------------------------------------------------------
 Test Passed.
-"test_eval_sequence_in_chunks" end time: Oct 18 12:01 UTC
+"test_eval_sequence_in_chunks" end time: Oct 18 12:04 UTC
 "test_eval_sequence_in_chunks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -319,14 +319,14 @@ Test Passed.
 7/8 Test: test_context_cloning
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_context_cloning"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_context_cloning" start time: Oct 18 12:01 UTC
+"test_context_cloning" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"test_context_cloning" end time: Oct 18 12:01 UTC
+"test_context_cloning" end time: Oct 18 12:04 UTC
 "test_context_cloning" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -334,7 +334,7 @@ Test Passed.
 8/8 Test: test_opencog_integration
 Command: "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_opencog_integration"
 Directory: /home/runner/work/rwkv.cog/rwkv.cog/tests
-"test_opencog_integration" start time: Oct 18 12:01 UTC
+"test_opencog_integration" start time: Oct 18 12:04 UTC
 Output:
 ----------------------------------------------------------
 Running OpenCog Integration Tests...
@@ -357,8 +357,8 @@ All OpenCog integration tests PASSED!
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_opencog_integration" end time: Oct 18 12:01 UTC
+"test_opencog_integration" end time: Oct 18 12:04 UTC
 "test_opencog_integration" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 18 12:01 UTC
+End testing: Oct 18 12:04 UTC

@@ -18,3 +18,5 @@ add_test([=[test_eval_sequence_in_chunks]=] "/home/runner/work/rwkv.cog/rwkv.cog
 set_tests_properties([=[test_eval_sequence_in_chunks]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;9;add_test;/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;56;rwkv_add_test;/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;0;")
 add_test([=[test_context_cloning]=] "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_context_cloning")
 set_tests_properties([=[test_context_cloning]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;9;add_test;/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;57;rwkv_add_test;/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;0;")
+add_test([=[test_opencog_integration]=] "/home/runner/work/rwkv.cog/rwkv.cog/bin/test_opencog_integration")
+set_tests_properties([=[test_opencog_integration]=] PROPERTIES  _BACKTRACE_TRIPLES "/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;9;add_test;/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;58;rwkv_add_test;/home/runner/work/rwkv.cog/rwkv.cog/tests/CMakeLists.txt;0;")

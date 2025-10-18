@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/runner/work/rwkv.cog/rwkv.cog
 all: CMakeFiles/rwkv.dir/all
 all: tests/all
 all: extras/all
+all: examples/all
 all: ggml/all
 .PHONY : all
 
@@ -73,12 +74,14 @@ all: ggml/all
 codegen: CMakeFiles/rwkv.dir/codegen
 codegen: tests/codegen
 codegen: extras/codegen
+codegen: examples/codegen
 codegen: ggml/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: tests/preinstall
 preinstall: extras/preinstall
+preinstall: examples/preinstall
 preinstall: ggml/preinstall
 .PHONY : preinstall
 
@@ -86,8 +89,28 @@ preinstall: ggml/preinstall
 clean: CMakeFiles/rwkv.dir/clean
 clean: tests/clean
 clean: extras/clean
+clean: examples/clean
 clean: ggml/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory examples
+
+# Recursive "all" directory target.
+examples/all: examples/CMakeFiles/cognitive_reasoning_demo.dir/all
+.PHONY : examples/all
+
+# Recursive "codegen" directory target.
+examples/codegen: examples/CMakeFiles/cognitive_reasoning_demo.dir/codegen
+.PHONY : examples/codegen
+
+# Recursive "preinstall" directory target.
+examples/preinstall:
+.PHONY : examples/preinstall
+
+# Recursive "clean" directory target.
+examples/clean: examples/CMakeFiles/cognitive_reasoning_demo.dir/clean
+.PHONY : examples/clean
 
 #=============================================================================
 # Directory level rules for directory extras
@@ -188,6 +211,7 @@ tests/all: tests/CMakeFiles/test_quantization_format_compatibility.dir/all
 tests/all: tests/CMakeFiles/test_logit_calculation_skipping.dir/all
 tests/all: tests/CMakeFiles/test_eval_sequence_in_chunks.dir/all
 tests/all: tests/CMakeFiles/test_context_cloning.dir/all
+tests/all: tests/CMakeFiles/test_opencog_integration.dir/all
 .PHONY : tests/all
 
 # Recursive "codegen" directory target.
@@ -198,6 +222,7 @@ tests/codegen: tests/CMakeFiles/test_quantization_format_compatibility.dir/codeg
 tests/codegen: tests/CMakeFiles/test_logit_calculation_skipping.dir/codegen
 tests/codegen: tests/CMakeFiles/test_eval_sequence_in_chunks.dir/codegen
 tests/codegen: tests/CMakeFiles/test_context_cloning.dir/codegen
+tests/codegen: tests/CMakeFiles/test_opencog_integration.dir/codegen
 .PHONY : tests/codegen
 
 # Recursive "preinstall" directory target.
@@ -212,6 +237,7 @@ tests/clean: tests/CMakeFiles/test_quantization_format_compatibility.dir/clean
 tests/clean: tests/CMakeFiles/test_logit_calculation_skipping.dir/clean
 tests/clean: tests/CMakeFiles/test_eval_sequence_in_chunks.dir/clean
 tests/clean: tests/CMakeFiles/test_context_cloning.dir/clean
+tests/clean: tests/CMakeFiles/test_opencog_integration.dir/clean
 .PHONY : tests/clean
 
 #=============================================================================
@@ -223,12 +249,12 @@ CMakeFiles/rwkv.dir/all: ggml/src/CMakeFiles/ggml.dir/all
 CMakeFiles/rwkv.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rwkv.dir/build.make CMakeFiles/rwkv.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rwkv.dir/build.make CMakeFiles/rwkv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=19,20 "Built target rwkv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=21,22,23 "Built target rwkv"
 .PHONY : CMakeFiles/rwkv.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rwkv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rwkv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : CMakeFiles/rwkv.dir/rule
@@ -240,7 +266,7 @@ rwkv: CMakeFiles/rwkv.dir/rule
 # codegen rule for target.
 CMakeFiles/rwkv.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rwkv.dir/build.make CMakeFiles/rwkv.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=19,20 "Finished codegen for target rwkv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=21,22,23 "Finished codegen for target rwkv"
 .PHONY : CMakeFiles/rwkv.dir/codegen
 
 # clean rule for target.
@@ -258,12 +284,12 @@ tests/CMakeFiles/test_ggml_basics.dir/all: ggml/src/CMakeFiles/ggml.dir/all
 tests/CMakeFiles/test_ggml_basics.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_ggml_basics.dir/build.make tests/CMakeFiles/test_ggml_basics.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_ggml_basics.dir/build.make tests/CMakeFiles/test_ggml_basics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=29,30 "Built target test_ggml_basics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=32,33 "Built target test_ggml_basics"
 .PHONY : tests/CMakeFiles/test_ggml_basics.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_ggml_basics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_ggml_basics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_ggml_basics.dir/rule
@@ -275,7 +301,7 @@ test_ggml_basics: tests/CMakeFiles/test_ggml_basics.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_ggml_basics.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_ggml_basics.dir/build.make tests/CMakeFiles/test_ggml_basics.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=29,30 "Finished codegen for target test_ggml_basics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=32,33 "Finished codegen for target test_ggml_basics"
 .PHONY : tests/CMakeFiles/test_ggml_basics.dir/codegen
 
 # clean rule for target.
@@ -293,12 +319,12 @@ tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/all: ggml/src/CMakeFiles/ggml.
 tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/build.make tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/build.make tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=35,36 "Built target test_quantized_matmul_on_gpu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=40,41 "Built target test_quantized_matmul_on_gpu"
 .PHONY : tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/rule
@@ -310,7 +336,7 @@ test_quantized_matmul_on_gpu: tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/
 # codegen rule for target.
 tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/build.make tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=35,36 "Finished codegen for target test_quantized_matmul_on_gpu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=40,41 "Finished codegen for target test_quantized_matmul_on_gpu"
 .PHONY : tests/CMakeFiles/test_quantized_matmul_on_gpu.dir/codegen
 
 # clean rule for target.
@@ -328,12 +354,12 @@ tests/CMakeFiles/test_tiny_rwkv.dir/all: ggml/src/CMakeFiles/ggml.dir/all
 tests/CMakeFiles/test_tiny_rwkv.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_tiny_rwkv.dir/build.make tests/CMakeFiles/test_tiny_rwkv.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_tiny_rwkv.dir/build.make tests/CMakeFiles/test_tiny_rwkv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=37,38 "Built target test_tiny_rwkv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=42,43 "Built target test_tiny_rwkv"
 .PHONY : tests/CMakeFiles/test_tiny_rwkv.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_tiny_rwkv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_tiny_rwkv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_tiny_rwkv.dir/rule
@@ -345,7 +371,7 @@ test_tiny_rwkv: tests/CMakeFiles/test_tiny_rwkv.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_tiny_rwkv.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_tiny_rwkv.dir/build.make tests/CMakeFiles/test_tiny_rwkv.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=37,38 "Finished codegen for target test_tiny_rwkv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=42,43 "Finished codegen for target test_tiny_rwkv"
 .PHONY : tests/CMakeFiles/test_tiny_rwkv.dir/codegen
 
 # clean rule for target.
@@ -363,12 +389,12 @@ tests/CMakeFiles/test_quantization_format_compatibility.dir/all: ggml/src/CMakeF
 tests/CMakeFiles/test_quantization_format_compatibility.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_quantization_format_compatibility.dir/build.make tests/CMakeFiles/test_quantization_format_compatibility.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_quantization_format_compatibility.dir/build.make tests/CMakeFiles/test_quantization_format_compatibility.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=33,34 "Built target test_quantization_format_compatibility"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=38,39 "Built target test_quantization_format_compatibility"
 .PHONY : tests/CMakeFiles/test_quantization_format_compatibility.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_quantization_format_compatibility.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_quantization_format_compatibility.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_quantization_format_compatibility.dir/rule
@@ -380,7 +406,7 @@ test_quantization_format_compatibility: tests/CMakeFiles/test_quantization_forma
 # codegen rule for target.
 tests/CMakeFiles/test_quantization_format_compatibility.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_quantization_format_compatibility.dir/build.make tests/CMakeFiles/test_quantization_format_compatibility.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=33,34 "Finished codegen for target test_quantization_format_compatibility"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=38,39 "Finished codegen for target test_quantization_format_compatibility"
 .PHONY : tests/CMakeFiles/test_quantization_format_compatibility.dir/codegen
 
 # clean rule for target.
@@ -398,12 +424,12 @@ tests/CMakeFiles/test_logit_calculation_skipping.dir/all: ggml/src/CMakeFiles/gg
 tests/CMakeFiles/test_logit_calculation_skipping.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_logit_calculation_skipping.dir/build.make tests/CMakeFiles/test_logit_calculation_skipping.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_logit_calculation_skipping.dir/build.make tests/CMakeFiles/test_logit_calculation_skipping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=31,32 "Built target test_logit_calculation_skipping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=34,35 "Built target test_logit_calculation_skipping"
 .PHONY : tests/CMakeFiles/test_logit_calculation_skipping.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_logit_calculation_skipping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_logit_calculation_skipping.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_logit_calculation_skipping.dir/rule
@@ -415,7 +441,7 @@ test_logit_calculation_skipping: tests/CMakeFiles/test_logit_calculation_skippin
 # codegen rule for target.
 tests/CMakeFiles/test_logit_calculation_skipping.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_logit_calculation_skipping.dir/build.make tests/CMakeFiles/test_logit_calculation_skipping.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=31,32 "Finished codegen for target test_logit_calculation_skipping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=34,35 "Finished codegen for target test_logit_calculation_skipping"
 .PHONY : tests/CMakeFiles/test_logit_calculation_skipping.dir/codegen
 
 # clean rule for target.
@@ -433,12 +459,12 @@ tests/CMakeFiles/test_eval_sequence_in_chunks.dir/all: ggml/src/CMakeFiles/ggml.
 tests/CMakeFiles/test_eval_sequence_in_chunks.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_eval_sequence_in_chunks.dir/build.make tests/CMakeFiles/test_eval_sequence_in_chunks.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_eval_sequence_in_chunks.dir/build.make tests/CMakeFiles/test_eval_sequence_in_chunks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=27,28 "Built target test_eval_sequence_in_chunks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=30,31 "Built target test_eval_sequence_in_chunks"
 .PHONY : tests/CMakeFiles/test_eval_sequence_in_chunks.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_eval_sequence_in_chunks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_eval_sequence_in_chunks.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_eval_sequence_in_chunks.dir/rule
@@ -450,7 +476,7 @@ test_eval_sequence_in_chunks: tests/CMakeFiles/test_eval_sequence_in_chunks.dir/
 # codegen rule for target.
 tests/CMakeFiles/test_eval_sequence_in_chunks.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_eval_sequence_in_chunks.dir/build.make tests/CMakeFiles/test_eval_sequence_in_chunks.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=27,28 "Finished codegen for target test_eval_sequence_in_chunks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=30,31 "Finished codegen for target test_eval_sequence_in_chunks"
 .PHONY : tests/CMakeFiles/test_eval_sequence_in_chunks.dir/codegen
 
 # clean rule for target.
@@ -468,12 +494,12 @@ tests/CMakeFiles/test_context_cloning.dir/all: ggml/src/CMakeFiles/ggml.dir/all
 tests/CMakeFiles/test_context_cloning.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_context_cloning.dir/build.make tests/CMakeFiles/test_context_cloning.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_context_cloning.dir/build.make tests/CMakeFiles/test_context_cloning.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=25,26 "Built target test_context_cloning"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=28,29 "Built target test_context_cloning"
 .PHONY : tests/CMakeFiles/test_context_cloning.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_context_cloning.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_context_cloning.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_context_cloning.dir/rule
@@ -485,13 +511,48 @@ test_context_cloning: tests/CMakeFiles/test_context_cloning.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_context_cloning.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_context_cloning.dir/build.make tests/CMakeFiles/test_context_cloning.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=25,26 "Finished codegen for target test_context_cloning"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=28,29 "Finished codegen for target test_context_cloning"
 .PHONY : tests/CMakeFiles/test_context_cloning.dir/codegen
 
 # clean rule for target.
 tests/CMakeFiles/test_context_cloning.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_context_cloning.dir/build.make tests/CMakeFiles/test_context_cloning.dir/clean
 .PHONY : tests/CMakeFiles/test_context_cloning.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_opencog_integration.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_opencog_integration.dir/all: CMakeFiles/rwkv.dir/all
+tests/CMakeFiles/test_opencog_integration.dir/all: ggml/src/CMakeFiles/ggml-base.dir/all
+tests/CMakeFiles/test_opencog_integration.dir/all: ggml/src/CMakeFiles/ggml.dir/all
+tests/CMakeFiles/test_opencog_integration.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=36,37 "Built target test_opencog_integration"
+.PHONY : tests/CMakeFiles/test_opencog_integration.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_opencog_integration.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_opencog_integration.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_opencog_integration.dir/rule
+
+# Convenience name for target.
+test_opencog_integration: tests/CMakeFiles/test_opencog_integration.dir/rule
+.PHONY : test_opencog_integration
+
+# codegen rule for target.
+tests/CMakeFiles/test_opencog_integration.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=36,37 "Finished codegen for target test_opencog_integration"
+.PHONY : tests/CMakeFiles/test_opencog_integration.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_opencog_integration.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/clean
+.PHONY : tests/CMakeFiles/test_opencog_integration.dir/clean
 
 #=============================================================================
 # Target rules for target extras/CMakeFiles/rwkv_cpu_info.dir
@@ -503,12 +564,12 @@ extras/CMakeFiles/rwkv_cpu_info.dir/all: ggml/src/CMakeFiles/ggml.dir/all
 extras/CMakeFiles/rwkv_cpu_info.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f extras/CMakeFiles/rwkv_cpu_info.dir/build.make extras/CMakeFiles/rwkv_cpu_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f extras/CMakeFiles/rwkv_cpu_info.dir/build.make extras/CMakeFiles/rwkv_cpu_info.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=21,22 "Built target rwkv_cpu_info"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=24,25 "Built target rwkv_cpu_info"
 .PHONY : extras/CMakeFiles/rwkv_cpu_info.dir/all
 
 # Build rule for subdir invocation for target.
 extras/CMakeFiles/rwkv_cpu_info.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extras/CMakeFiles/rwkv_cpu_info.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : extras/CMakeFiles/rwkv_cpu_info.dir/rule
@@ -520,7 +581,7 @@ rwkv_cpu_info: extras/CMakeFiles/rwkv_cpu_info.dir/rule
 # codegen rule for target.
 extras/CMakeFiles/rwkv_cpu_info.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f extras/CMakeFiles/rwkv_cpu_info.dir/build.make extras/CMakeFiles/rwkv_cpu_info.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=21,22 "Finished codegen for target rwkv_cpu_info"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=24,25 "Finished codegen for target rwkv_cpu_info"
 .PHONY : extras/CMakeFiles/rwkv_cpu_info.dir/codegen
 
 # clean rule for target.
@@ -538,12 +599,12 @@ extras/CMakeFiles/rwkv_quantize.dir/all: ggml/src/CMakeFiles/ggml.dir/all
 extras/CMakeFiles/rwkv_quantize.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f extras/CMakeFiles/rwkv_quantize.dir/build.make extras/CMakeFiles/rwkv_quantize.dir/depend
 	$(MAKE) $(MAKESILENT) -f extras/CMakeFiles/rwkv_quantize.dir/build.make extras/CMakeFiles/rwkv_quantize.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=23,24 "Built target rwkv_quantize"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=26,27 "Built target rwkv_quantize"
 .PHONY : extras/CMakeFiles/rwkv_quantize.dir/all
 
 # Build rule for subdir invocation for target.
 extras/CMakeFiles/rwkv_quantize.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extras/CMakeFiles/rwkv_quantize.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
 .PHONY : extras/CMakeFiles/rwkv_quantize.dir/rule
@@ -555,7 +616,7 @@ rwkv_quantize: extras/CMakeFiles/rwkv_quantize.dir/rule
 # codegen rule for target.
 extras/CMakeFiles/rwkv_quantize.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f extras/CMakeFiles/rwkv_quantize.dir/build.make extras/CMakeFiles/rwkv_quantize.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=23,24 "Finished codegen for target rwkv_quantize"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=26,27 "Finished codegen for target rwkv_quantize"
 .PHONY : extras/CMakeFiles/rwkv_quantize.dir/codegen
 
 # clean rule for target.
@@ -564,13 +625,48 @@ extras/CMakeFiles/rwkv_quantize.dir/clean:
 .PHONY : extras/CMakeFiles/rwkv_quantize.dir/clean
 
 #=============================================================================
+# Target rules for target examples/CMakeFiles/cognitive_reasoning_demo.dir
+
+# All Build rule for target.
+examples/CMakeFiles/cognitive_reasoning_demo.dir/all: CMakeFiles/rwkv.dir/all
+examples/CMakeFiles/cognitive_reasoning_demo.dir/all: ggml/src/CMakeFiles/ggml-base.dir/all
+examples/CMakeFiles/cognitive_reasoning_demo.dir/all: ggml/src/CMakeFiles/ggml.dir/all
+examples/CMakeFiles/cognitive_reasoning_demo.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/cognitive_reasoning_demo.dir/build.make examples/CMakeFiles/cognitive_reasoning_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/cognitive_reasoning_demo.dir/build.make examples/CMakeFiles/cognitive_reasoning_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=1,2 "Built target cognitive_reasoning_demo"
+.PHONY : examples/CMakeFiles/cognitive_reasoning_demo.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/cognitive_reasoning_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 23
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/cognitive_reasoning_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles 0
+.PHONY : examples/CMakeFiles/cognitive_reasoning_demo.dir/rule
+
+# Convenience name for target.
+cognitive_reasoning_demo: examples/CMakeFiles/cognitive_reasoning_demo.dir/rule
+.PHONY : cognitive_reasoning_demo
+
+# codegen rule for target.
+examples/CMakeFiles/cognitive_reasoning_demo.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/cognitive_reasoning_demo.dir/build.make examples/CMakeFiles/cognitive_reasoning_demo.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=1,2 "Finished codegen for target cognitive_reasoning_demo"
+.PHONY : examples/CMakeFiles/cognitive_reasoning_demo.dir/codegen
+
+# clean rule for target.
+examples/CMakeFiles/cognitive_reasoning_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/cognitive_reasoning_demo.dir/build.make examples/CMakeFiles/cognitive_reasoning_demo.dir/clean
+.PHONY : examples/CMakeFiles/cognitive_reasoning_demo.dir/clean
+
+#=============================================================================
 # Target rules for target ggml/src/CMakeFiles/ggml-base.dir
 
 # All Build rule for target.
 ggml/src/CMakeFiles/ggml-base.dir/all:
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml-base.dir/build.make ggml/src/CMakeFiles/ggml-base.dir/depend
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml-base.dir/build.make ggml/src/CMakeFiles/ggml-base.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=3,4,5,6,7,8,9 "Built target ggml-base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=5,6,7,8,9,10,11 "Built target ggml-base"
 .PHONY : ggml/src/CMakeFiles/ggml-base.dir/all
 
 # Build rule for subdir invocation for target.
@@ -587,7 +683,7 @@ ggml-base: ggml/src/CMakeFiles/ggml-base.dir/rule
 # codegen rule for target.
 ggml/src/CMakeFiles/ggml-base.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml-base.dir/build.make ggml/src/CMakeFiles/ggml-base.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=3,4,5,6,7,8,9 "Finished codegen for target ggml-base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=5,6,7,8,9,10,11 "Finished codegen for target ggml-base"
 .PHONY : ggml/src/CMakeFiles/ggml-base.dir/codegen
 
 # clean rule for target.
@@ -603,7 +699,7 @@ ggml/src/CMakeFiles/ggml.dir/all: ggml/src/CMakeFiles/ggml-base.dir/all
 ggml/src/CMakeFiles/ggml.dir/all: ggml/src/CMakeFiles/ggml-cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml.dir/build.make ggml/src/CMakeFiles/ggml.dir/depend
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml.dir/build.make ggml/src/CMakeFiles/ggml.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=1,2 "Built target ggml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=3,4 "Built target ggml"
 .PHONY : ggml/src/CMakeFiles/ggml.dir/all
 
 # Build rule for subdir invocation for target.
@@ -620,7 +716,7 @@ ggml: ggml/src/CMakeFiles/ggml.dir/rule
 # codegen rule for target.
 ggml/src/CMakeFiles/ggml.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml.dir/build.make ggml/src/CMakeFiles/ggml.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=1,2 "Finished codegen for target ggml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=3,4 "Finished codegen for target ggml"
 .PHONY : ggml/src/CMakeFiles/ggml.dir/codegen
 
 # clean rule for target.
@@ -635,7 +731,7 @@ ggml/src/CMakeFiles/ggml.dir/clean:
 ggml/src/CMakeFiles/ggml-cpu.dir/all: ggml/src/CMakeFiles/ggml-base.dir/all
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml-cpu.dir/build.make ggml/src/CMakeFiles/ggml-cpu.dir/depend
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml-cpu.dir/build.make ggml/src/CMakeFiles/ggml-cpu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18 "Built target ggml-cpu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20 "Built target ggml-cpu"
 .PHONY : ggml/src/CMakeFiles/ggml-cpu.dir/all
 
 # Build rule for subdir invocation for target.
@@ -652,7 +748,7 @@ ggml-cpu: ggml/src/CMakeFiles/ggml-cpu.dir/rule
 # codegen rule for target.
 ggml/src/CMakeFiles/ggml-cpu.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f ggml/src/CMakeFiles/ggml-cpu.dir/build.make ggml/src/CMakeFiles/ggml-cpu.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18 "Finished codegen for target ggml-cpu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/rwkv.cog/rwkv.cog/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20 "Finished codegen for target ggml-cpu"
 .PHONY : ggml/src/CMakeFiles/ggml-cpu.dir/codegen
 
 # clean rule for target.

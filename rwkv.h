@@ -220,6 +220,11 @@ extern "C" {
     // Returns system information string.
     RWKV_API const char * rwkv_get_system_info_string(void);
 
+    // Include OpenCog cognitive architecture extensions
+    // These functions provide AtomSpace integration for cognitive reasoning
+    // For detailed documentation, see rwkv_opencog.h
+#include "rwkv_opencog.h"
+
 #if defined(__cplusplus)
 }
 #endif

@@ -54,6 +54,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/runner/work/rwkv.cog/rwkv.cog/examples/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/runner/work/rwkv.cog/rwkv.cog/ggml/cmake_install.cmake")
 endif()
 

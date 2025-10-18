@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rwkv.dir/link.d"
   "CMakeFiles/rwkv.dir/rwkv.cpp.o"
   "CMakeFiles/rwkv.dir/rwkv.cpp.o.d"
+  "CMakeFiles/rwkv.dir/rwkv_opencog.cpp.o"
+  "CMakeFiles/rwkv.dir/rwkv_opencog.cpp.o.d"
   "librwkv.pdb"
   "librwkv.so"
 )

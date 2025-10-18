@@ -19,6 +19,7 @@ CMakeFiles/rwkv.dir/rwkv.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /home/runner/work/rwkv.cog/rwkv.cog/rwkv_opencog.h \
  /home/runner/work/rwkv.cog/rwkv.cog/ggml/include/ggml.h \
  /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \

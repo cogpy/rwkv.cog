@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/runner/work/rwkv.cog/rwkv.cog/rwkv.cpp" "CMakeFiles/rwkv.dir/rwkv.cpp.o" "gcc" "CMakeFiles/rwkv.dir/rwkv.cpp.o.d"
+  "/home/runner/work/rwkv.cog/rwkv.cog/rwkv_opencog.cpp" "CMakeFiles/rwkv.dir/rwkv_opencog.cpp.o" "gcc" "CMakeFiles/rwkv.dir/rwkv_opencog.cpp.o.d"
   "" "librwkv.so" "gcc" "CMakeFiles/rwkv.dir/link.d"
   )
 

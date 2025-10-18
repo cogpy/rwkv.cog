@@ -276,6 +276,19 @@ test_context_cloning/fast:
 .PHONY : test_context_cloning/fast
 
 #=============================================================================
+# Target rules for targets named test_opencog_integration
+
+# Build rule for target.
+test_opencog_integration: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_opencog_integration
+.PHONY : test_opencog_integration
+
+# fast build rule for target.
+test_opencog_integration/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/build
+.PHONY : test_opencog_integration/fast
+
+#=============================================================================
 # Target rules for targets named rwkv_cpu_info
 
 # Build rule for target.
@@ -300,6 +313,19 @@ rwkv_quantize: cmake_check_build_system
 rwkv_quantize/fast:
 	$(MAKE) $(MAKESILENT) -f extras/CMakeFiles/rwkv_quantize.dir/build.make extras/CMakeFiles/rwkv_quantize.dir/build
 .PHONY : rwkv_quantize/fast
+
+#=============================================================================
+# Target rules for targets named cognitive_reasoning_demo
+
+# Build rule for target.
+cognitive_reasoning_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cognitive_reasoning_demo
+.PHONY : cognitive_reasoning_demo
+
+# fast build rule for target.
+cognitive_reasoning_demo/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/cognitive_reasoning_demo.dir/build.make examples/CMakeFiles/cognitive_reasoning_demo.dir/build
+.PHONY : cognitive_reasoning_demo/fast
 
 #=============================================================================
 # Target rules for targets named ggml-base
@@ -364,6 +390,30 @@ rwkv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rwkv.dir/build.make CMakeFiles/rwkv.dir/rwkv.cpp.s
 .PHONY : rwkv.cpp.s
 
+rwkv_opencog.o: rwkv_opencog.cpp.o
+.PHONY : rwkv_opencog.o
+
+# target to build an object file
+rwkv_opencog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rwkv.dir/build.make CMakeFiles/rwkv.dir/rwkv_opencog.cpp.o
+.PHONY : rwkv_opencog.cpp.o
+
+rwkv_opencog.i: rwkv_opencog.cpp.i
+.PHONY : rwkv_opencog.i
+
+# target to preprocess a source file
+rwkv_opencog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rwkv.dir/build.make CMakeFiles/rwkv.dir/rwkv_opencog.cpp.i
+.PHONY : rwkv_opencog.cpp.i
+
+rwkv_opencog.s: rwkv_opencog.cpp.s
+.PHONY : rwkv_opencog.s
+
+# target to generate assembly for a file
+rwkv_opencog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rwkv.dir/build.make CMakeFiles/rwkv.dir/rwkv_opencog.cpp.s
+.PHONY : rwkv_opencog.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -377,6 +427,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... cognitive_reasoning_demo"
 	@echo "... ggml"
 	@echo "... ggml-base"
 	@echo "... ggml-cpu"
@@ -387,12 +438,16 @@ help:
 	@echo "... test_eval_sequence_in_chunks"
 	@echo "... test_ggml_basics"
 	@echo "... test_logit_calculation_skipping"
+	@echo "... test_opencog_integration"
 	@echo "... test_quantization_format_compatibility"
 	@echo "... test_quantized_matmul_on_gpu"
 	@echo "... test_tiny_rwkv"
 	@echo "... rwkv.o"
 	@echo "... rwkv.i"
 	@echo "... rwkv.s"
+	@echo "... rwkv_opencog.o"
+	@echo "... rwkv_opencog.i"
+	@echo "... rwkv_opencog.s"
 .PHONY : help
 
 

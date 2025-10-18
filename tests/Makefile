@@ -269,6 +269,20 @@ test_context_cloning/fast:
 	cd /home/runner/work/rwkv.cog/rwkv.cog && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_context_cloning.dir/build.make tests/CMakeFiles/test_context_cloning.dir/build
 .PHONY : test_context_cloning/fast
 
+# Convenience name for target.
+tests/CMakeFiles/test_opencog_integration.dir/rule:
+	cd /home/runner/work/rwkv.cog/rwkv.cog && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_opencog_integration.dir/rule
+.PHONY : tests/CMakeFiles/test_opencog_integration.dir/rule
+
+# Convenience name for target.
+test_opencog_integration: tests/CMakeFiles/test_opencog_integration.dir/rule
+.PHONY : test_opencog_integration
+
+# fast build rule for target.
+test_opencog_integration/fast:
+	cd /home/runner/work/rwkv.cog/rwkv.cog && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/build
+.PHONY : test_opencog_integration/fast
+
 test_context_cloning.o: test_context_cloning.c.o
 .PHONY : test_context_cloning.o
 
@@ -365,6 +379,30 @@ test_logit_calculation_skipping.c.s:
 	cd /home/runner/work/rwkv.cog/rwkv.cog && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_logit_calculation_skipping.dir/build.make tests/CMakeFiles/test_logit_calculation_skipping.dir/test_logit_calculation_skipping.c.s
 .PHONY : test_logit_calculation_skipping.c.s
 
+test_opencog_integration.o: test_opencog_integration.c.o
+.PHONY : test_opencog_integration.o
+
+# target to build an object file
+test_opencog_integration.c.o:
+	cd /home/runner/work/rwkv.cog/rwkv.cog && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/test_opencog_integration.c.o
+.PHONY : test_opencog_integration.c.o
+
+test_opencog_integration.i: test_opencog_integration.c.i
+.PHONY : test_opencog_integration.i
+
+# target to preprocess a source file
+test_opencog_integration.c.i:
+	cd /home/runner/work/rwkv.cog/rwkv.cog && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/test_opencog_integration.c.i
+.PHONY : test_opencog_integration.c.i
+
+test_opencog_integration.s: test_opencog_integration.c.s
+.PHONY : test_opencog_integration.s
+
+# target to generate assembly for a file
+test_opencog_integration.c.s:
+	cd /home/runner/work/rwkv.cog/rwkv.cog && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_opencog_integration.dir/build.make tests/CMakeFiles/test_opencog_integration.dir/test_opencog_integration.c.s
+.PHONY : test_opencog_integration.c.s
+
 test_quantization_format_compatibility.o: test_quantization_format_compatibility.c.o
 .PHONY : test_quantization_format_compatibility.o
 
@@ -454,6 +492,7 @@ help:
 	@echo "... test_eval_sequence_in_chunks"
 	@echo "... test_ggml_basics"
 	@echo "... test_logit_calculation_skipping"
+	@echo "... test_opencog_integration"
 	@echo "... test_quantization_format_compatibility"
 	@echo "... test_quantized_matmul_on_gpu"
 	@echo "... test_tiny_rwkv"
@@ -469,6 +508,9 @@ help:
 	@echo "... test_logit_calculation_skipping.o"
 	@echo "... test_logit_calculation_skipping.i"
 	@echo "... test_logit_calculation_skipping.s"
+	@echo "... test_opencog_integration.o"
+	@echo "... test_opencog_integration.i"
+	@echo "... test_opencog_integration.s"
 	@echo "... test_quantization_format_compatibility.o"
 	@echo "... test_quantization_format_compatibility.i"
 	@echo "... test_quantization_format_compatibility.s"

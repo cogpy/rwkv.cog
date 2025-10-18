@@ -62,6 +62,8 @@ tests/CMakeFiles/test_quantization_format_compatibility.dir/test_quantization_fo
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /home/runner/work/rwkv.cog/rwkv.cog/./rwkv_opencog.h \
+ /home/runner/work/rwkv.cog/rwkv.cog/./rwkv.h \
  /home/runner/work/rwkv.cog/rwkv.cog/tests/logit_difference_validator.inc \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \

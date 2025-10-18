@@ -67,6 +67,8 @@ extras/CMakeFiles/rwkv_quantize.dir/quantize.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /home/runner/work/rwkv.cog/rwkv.cog/./rwkv.h \
+ /home/runner/work/rwkv.cog/rwkv.cog/./rwkv_opencog.h \
  /home/runner/work/rwkv.cog/rwkv.cog/./rwkv.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \

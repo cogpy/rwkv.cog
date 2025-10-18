@@ -67,6 +67,8 @@ tests/CMakeFiles/test_eval_sequence_in_chunks.dir/test_eval_sequence_in_chunks.c
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /home/runner/work/rwkv.cog/rwkv.cog/./rwkv_opencog.h \
+ /home/runner/work/rwkv.cog/rwkv.cog/./rwkv.h \
  /home/runner/work/rwkv.cog/rwkv.cog/tests/assertions.inc \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \

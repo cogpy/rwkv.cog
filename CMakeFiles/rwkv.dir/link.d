@@ -2,6 +2,7 @@ librwkv.so: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
   CMakeFiles/rwkv.dir/rwkv.cpp.o \
+  CMakeFiles/rwkv.dir/rwkv_opencog.cpp.o \
   ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o \
   ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o \
   ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o \
@@ -49,6 +50,8 @@ librwkv.so: \
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
 CMakeFiles/rwkv.dir/rwkv.cpp.o:
+
+CMakeFiles/rwkv.dir/rwkv_opencog.cpp.o:
 
 ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o:
 

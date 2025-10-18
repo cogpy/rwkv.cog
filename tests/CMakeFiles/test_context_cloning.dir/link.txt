@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/test_context_cloning.dir/link.d CMakeFiles/test_context_cloning.dir/test_context_cloning.c.o -o ../bin/test_context_cloning  -Wl,-rpath,/home/runner/work/rwkv.cog/rwkv.cog/ggml/src:/home/runner/work/rwkv.cog/rwkv.cog ../ggml/src/libggml.so ../librwkv.so ../ggml/src/libggml-cpu.so ../ggml/src/libggml-base.so

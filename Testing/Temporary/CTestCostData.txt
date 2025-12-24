@@ -1,0 +1,9 @@
+test_ggml_basics 4 0.000863375
+test_quantized_matmul_on_gpu 4 0.000209553
+test_tiny_rwkv 4 0.161012
+test_quantization_format_compatibility 4 0.015696
+test_logit_calculation_skipping 4 0.00512991
+test_eval_sequence_in_chunks 4 0.0242212
+test_context_cloning 4 0.00406935
+test_opencog_integration 2 0.000856748
+---

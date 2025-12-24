@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/rwkv_cpu_info.dir/link.d CMakeFiles/rwkv_cpu_info.dir/cpu_info.c.o -o ../bin/rwkv_cpu_info  -Wl,-rpath,/home/runner/work/rwkv.cog/rwkv.cog/ggml/src:/home/runner/work/rwkv.cog/rwkv.cog ../ggml/src/libggml.so ../librwkv.so ../ggml/src/libggml-cpu.so ../ggml/src/libggml-base.so

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/test_ggml_basics.dir/link.d CMakeFiles/test_ggml_basics.dir/test_ggml_basics.c.o -o ../bin/test_ggml_basics  -Wl,-rpath,/home/runner/work/rwkv.cog/rwkv.cog/ggml/src:/home/runner/work/rwkv.cog/rwkv.cog ../ggml/src/libggml.so ../librwkv.so ../ggml/src/libggml-cpu.so ../ggml/src/libggml-base.so
